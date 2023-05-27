@@ -522,10 +522,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.m-4 {
-  margin: 1rem;
-}
-
 .m-13 {
   margin: 3.25rem;
 }
@@ -546,32 +542,16 @@ video {
   height: 100vh;
 }
 
-.max-h-screen {
-  max-height: 100vh;
+.w-1\/2 {
+  width: 50%;
 }
 
 .w-32 {
   width: 8rem;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
-.w-14 {
-  width: 3.5rem;
-}
-
 .w-96 {
   width: 24rem;
-}
-
-.border {
-  border-width: 1px;
-}
-
-.p-12 {
-  padding: 3rem;
 }
 
 .py-12 {
@@ -579,6 +559,6 @@ video {
   padding-bottom: 3rem;
 }
 
-.font-sans {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.font-ubuntu {
+  font-family: Ubuntu;
 }

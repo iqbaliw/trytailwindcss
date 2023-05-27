@@ -6,6 +6,9 @@ module.exports = {
             margin: {
                 13: "3.25rem",
             },
+            fontFamily: {
+                ubuntu: "Ubuntu",
+            },
         },
     },
     plugins: [],
