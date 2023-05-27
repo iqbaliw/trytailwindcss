@@ -530,6 +530,38 @@ video {
   margin: 3.25rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.max-h-screen {
+  max-height: 100vh;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-14 {
+  width: 3.5rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
 .border {
   border-width: 1px;
 }
