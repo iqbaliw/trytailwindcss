@@ -9,6 +9,10 @@ module.exports = {
             fontFamily: {
                 ubuntu: "Ubuntu",
             },
+            colors: {
+                pumpkin: "#d35400",
+                wisteria: "#8e44ad",
+            },
         },
     },
     plugins: [],
