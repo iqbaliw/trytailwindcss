@@ -185,8 +185,13 @@
                         type="email"
                         id="email"
                         placeholder="masukkan email.."
-                        class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-300 focus:outline-none focus:ring-1 focus:ring-violet-500 focus:border-violet-500 text-slate-500"
+                        class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-300 focus:outline-none focus:ring-1 focus:ring-violet-500 focus:border-violet-500 text-slate-500 invalid:text-red-500 invalid:focus:ring-red-500 invalid:focus:border-red-500 peer"
                     />
+                    <p
+                        class="m-1 text-sm italic text-red-500 invisible peer-invalid:visible"
+                    >
+                        Email tidak valid
+                    </p>
                 </label>
             </form>
         </div>
