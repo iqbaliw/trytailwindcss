@@ -1094,6 +1094,27 @@ video {
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
+.after\:ml-0::after {
+  content: var(--tw-content);
+  margin-left: 0px;
+}
+
+.after\:ml-0\.5::after {
+  content: var(--tw-content);
+  margin-left: 0.125rem;
+}
+
+.after\:text-red-500::after {
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.after\:content-\[\'\*\'\]::after {
+  --tw-content: '*';
+  content: var(--tw-content);
+}
+
 .hover\:bg-sky-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(2 132 199 / var(--tw-bg-opacity));
