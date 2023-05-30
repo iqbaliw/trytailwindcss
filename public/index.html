@@ -12,15 +12,41 @@
             href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
             rel="stylesheet"
         />
+        <style type="text/tailwindcss">
+            #toggle:checked ~ label div.toggle-circle {
+                @apply translate-x-3;
+            }
+        </style>
     </head>
-    <body class="bg-slate-50">
-        <h1 class="mx-4 my-8 text-6xl font-bold text-center">
+    <body class="bg-slate-50 dark:bg-slate-700">
+        <h1
+            class="mx-4 my-12 text-6xl font-bold text-center dark:text-yellow-400"
+        >
             Try
             <span
                 class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
                 >TailwindCSS</span
             >
         </h1>
+
+        <div class="flex justify-center mb-10 items-center">
+            <span class="text-sm text-slate-500 dark:text-slate-300 mr-3"
+                >Light</span
+            >
+            <input type="checkbox" name="" id="toggle" hidden />
+            <label for="toggle">
+                <div
+                    class="w-12 h-7 bg-slate-300 border-2 border-slate-400 dark:bg-yellow-200 dark:border-yellow-400 rounded-full flex items-center p-1"
+                >
+                    <div
+                        class="w-5 h-5 rounded-full bg-slate-600 dark:bg-yellow-400 toggle-circle"
+                    ></div>
+                </div>
+            </label>
+            <span class="text-sm text-slate-500 dark:text-slate-300 ml-3"
+                >Dark</span
+            >
+        </div>
 
         <section
             class="mb-10 bg-gradient-to-r from-cyan-400 to-violet-400 max-w-4xl mx-auto p-3 border-2 rounded-md border-blue-600"
@@ -137,7 +163,7 @@
         </div>
 
         <div
-            class="max-w-xl mx-auto h-96 bg-slate-300 border-4 border-violet-500 rounded-2xl bg-cover shadow-2xl shadow-violet-500 flex"
+            class="max-w-xl mx-auto h-96 bg-slate-300 border-4 border-violet-500 rounded-2xl bg-cover shadow-2xl shadow-violet-500 flex dark:border-yellow-500 dark:shadow-yellow-400"
             style="background-image: url('./image/computer.jpg')"
         >
             <div
@@ -145,25 +171,25 @@
             ></div>
         </div>
 
-        <hr class="my-20 border-2 border-purple-500" />
+        <hr class="my-20 border-2 border-purple-500 dark:border-yellow-500" />
 
         <button
-            class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-ubuntu block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-900"
+            class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-ubuntu block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-900 dark:bg-yellow-400 dark:text-slate-800 dark:hover:bg-yellow-500 dark:active:bg-yellow-600 dark:focus:ring dark:focus:ring-yellow-700"
         >
             Save
         </button>
 
         <div
-            class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-ubuntu hover:bg-violet-500 group"
+            class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-ubuntu hover:bg-violet-500 group dark:border-slate-500"
         >
             <h5
-                class="font-bold text-slate-600 text-2xl mb-4 group-hover:text-white"
+                class="font-bold text-slate-600 text-2xl mb-4 group-hover:text-white dark:text-slate-300"
             >
                 My Card
             </h5>
 
             <p
-                class="text-slate-600 group-hover:text-white selection:bg-yellow-300 selection:text-slate-700 first-letter:text-6xl first-letter:float-left first-letter:mr-3"
+                class="text-slate-600 group-hover:text-white selection:bg-yellow-300 selection:text-slate-700 first-letter:text-6xl first-letter:float-left first-letter:mr-3 dark:text-slate-300"
             >
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Possimus beatae modi perspiciatis esse, quam in accusamus
@@ -173,19 +199,19 @@
         </div>
 
         <div
-            class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-ubuntu"
+            class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-ubuntu dark:border-slate-500"
         >
             <form action="">
                 <label for="email">
                     <span
-                        class="block font-semibold mb-1 text-slate-500 after:content-['*'] after:text-red-500 after:ml-0.5"
+                        class="block font-semibold mb-1 text-slate-500 after:content-['*'] after:text-red-500 after:ml-0.5 dark:text-slate-300"
                         >Email</span
                     >
                     <input
                         type="email"
                         id="email"
                         placeholder="masukkan email.."
-                        class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-300 focus:outline-none focus:ring-1 focus:ring-violet-500 focus:border-violet-500 text-slate-500 invalid:text-red-500 invalid:focus:ring-red-500 invalid:focus:border-red-500 peer"
+                        class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-300 focus:outline-none focus:ring-1 focus:ring-violet-500 focus:border-violet-500 text-slate-500 invalid:text-red-500 invalid:focus:ring-red-500 invalid:focus:border-red-500 peer dark:border-slate-700 dark:bg-slate-600 dark:focus:border-yellow-500 dark:focus:ring-yellow-500 dark:placeholder:text-slate-400"
                     />
                     <p
                         class="m-1 text-sm italic text-red-500 invisible peer-invalid:visible"
@@ -197,5 +223,16 @@
         </div>
 
         <div class="mb-60"></div>
+
+        <script>
+            const toggleMode = document.querySelector("#toggle");
+            const html = document.querySelector("html");
+
+            toggleMode.addEventListener("click", function () {
+                toggleMode.checked
+                    ? html.classList.add("dark")
+                    : html.classList.remove("dark");
+            });
+        </script>
     </body>
 </html>
